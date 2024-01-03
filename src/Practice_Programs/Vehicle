@@ -1,0 +1,31 @@
+package Practice_Programs;
+interface Vehicles {
+    abstract void start_Engine();
+}
+class Car implements mypack_1.Vehicles {
+    public void start_Engine() {
+        String start= "10 Sec";
+        System.out.println("Car to Start Engine in"+" "+start);
+    }
+}
+class Scooter implements mypack_1.Vehicles {
+    public void start_Engine() {
+        String start = "15 Sec";
+        System.out.println("Scooter to Start Engine in" + " " + start);
+    }
+}
+class Truck implements mypack_1.Vehicles {
+    public void start_Engine() {
+        String start="30 Sec";
+        System.out.println("Truck to Start Engine in" + " " + start);
+    }
+}
+public class Vehicle{
+    public static void main(String args[]) {
+        mypack_1.Vehicles[] v = {new mypack_1.Car(), new mypack_1.Scooter(), new mypack_1.Truck()};
+        for (int i = 0; i < v.length; i++) {
+            v[i].start_Engine();
+            System.out.println();
+        }
+    }
+}
