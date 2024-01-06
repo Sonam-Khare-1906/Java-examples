@@ -6,6 +6,8 @@ interface Tables{
 }
 public class table {
     public static void main(String[] args){
+//using lambda expression
+
         Tables t=(n1,t1)->{
             int result=n1*t1;
             System.out.println("Multiplication"+result);
